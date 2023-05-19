@@ -1,6 +1,7 @@
 package br.com.alura.desafio.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Card {
@@ -45,6 +46,7 @@ public class Card {
             this.message += "Saldo insuficiente!\n\n";
         }
         this.message += "COMPRAS REALIZADAS:\n\n";
+        Collections.sort(this.shopping, Collections.reverseOrder());
         this.shopping.forEach(item -> {
             this.message += item.toString() + "\n\n";
         });
